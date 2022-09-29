@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #cebc81;
+}
+ul {
+  list-style-type: none;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+header {
+  background-color: #19181a;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+#logo {
+  width: 60px;
+  margin: 5px 2% 0 2%;
+  align-items: center;
+  flex-basis: 25%;
+}
+#free-edu {
+  opacity: 0;
+}
+#logo img {
+  width: 60px;
+}
+nav {
+  flex-basis: 50%;
+}
+nav ul {
+  justify-content: space-around;
+}
+header button {
+  font-size: 1.1rem;
+  padding:1em;
+  margin-right: 2%;
+  border-radius:2em;
+  font-weight:300;
+  color:#19181a;
+  background-color: #cebc81;
+  text-align:center;
+  transition: all 0.3s;
+  flex-basis: 25%;
+}
+header button:hover {
+  background-color:#19181a;
+  color: #cebc81;
+}
+
+#banner {
+  background: url(https://images.pexels.com/photos/734168/pexels-photo-734168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
+  background-size: cover;
+  background-position: right;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+#banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #19181a;
+  opacity: 0.95;
+  z-index: -1;
+}
+#banner-content {
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: space-between;
+  text-align: center;
+  width: 50vw;
+}
+#banner-content h1 {
+  font-size: 3rem;
+  margin:110px 0;
+  align-self: center;
+}
+#banner-content p {
+  font-size: 1.5rem;
+}
+
+#events {
+  width: 100%;
+  height: 1800px;
+  padding: 50px 0;
+  position: relative;
+  background-color: #479761;
+  top: 700px;
+}
+#events-content {
+  width: 50vw;
+  margin: 0 auto;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+#events h2 {
+  font-size: 2rem;
+  margin: 40px 0;
+}
+#events p {
+  color: #19181a;
+}
+#events a {
+  color: #a16e83;
+  font-weight: bold;
+  border-bottom: 1px solid #a16e83;
+}
+#events img {
+  width: 100%;
+  border: 1px #cebc81;
+  border-radius: 20%;
+}
+#events li {
+  border: 5px solid #cebc81;
+  border-radius: 20%;
+  padding: 1vw;
+  flex-basis: 33%;
+}
+#events ul {
+  /* border: 1px solid red; */
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
+#about {
+  position: relative;
+  top: 700px;
+  min-height: 100vh;
+  width: 100%;
+  padding: 50px 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #a16e83;
+}
+#about-content {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+#image-box {
+  position: relative;
+  width: 50%;
+  height: 600px;
+  background: url('https://images.pexels.com/photos/5212320/pexels-photo-5212320.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260') no-repeat center / cover;
+  border-radius: 8px;
+}
+#image-box::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #b19f9e79;
+  border-radius: 8px;
+}
+#about-info {
+  flex-direction: column;
+  width: 50%;
+  min-height: 400px;
+  background-color: #b19f9e;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+  margin-left: -150px;
+  z-index: 100;
+}
+#about-info h2{
+  font-size: 40px;
+  font-weight: lighter;
+}
+#about-info p{
+  margin: 20px 0;
+  font-weight: 500;
+  line-height: 25px;
+}
+#about-info a {
+  color: #a16e83;
+  font-weight: bold;
+  border-bottom: 1px solid #a16e83;
+  align-self: flex-start;
+  letter-spacing: 2px;
+}
+@media (min-width: 470px) {
+  #free-edu {
+    opacity: 1;
+  }
+  header button {
+    padding:0.3em 1.2em;
+  }
+  #events {
+    height: 800px;
+  }
+  #events ul {
+    flex-direction: row;
+  }
+}
+
+footer {
+  position: relative;
+  top: 700px;
+  width: 100%;
+  background-color: #cebc81;
+  height: 50px;
+  align-items: flex-end;
+  justify-content: center;
+}
+footer h3 {
+  color: white;
+}
+@media only screen and (max-width:768px) {
+  #about-content {
+    flex-direction: column;
+  }
+  #image-box {
+    width: 100%;
+  }
+  #about-info {
+    width: 80%;
+    margin: 0;
+    margin-top: -150px;
+  }
+}
